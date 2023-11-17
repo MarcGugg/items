@@ -7,3 +7,16 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Item.destroy_all
+
+Item.create!([{
+    name: "Pen",
+    deleted_at: nil
+},
+{
+    name: "Screwdriver",
+    deleted_at: nil
+}
+])
+
+p "Created #{Item.count} items"
